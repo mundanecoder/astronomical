@@ -1,0 +1,108 @@
+
+.App {
+  text-align: center;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 1.5rem;
+  margin: 2vw;
+  /* justify-content: center; */
+  text-align: center;
+  place-items: center;
+  /* background-color: blue; */
+
+}
+.searchBox{
+  display: grid;
+  place-items: center;
+  height: 5vh;
+  /* background-color: aqua; */
+  /* text-align: center; */
+}
+.search_player{
+  height: 3vh;
+}
+
+.nba{
+  color: rgb(237, 240, 249);
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(5, 5, 5);
+  height: 8vh;
+  place-items: center;
+  
+}
+  .name{ 
+  color: rgb(236, 225, 225);
+  /* background-color: rgb(49, 49, 158); */
+  text-align: center;
+
+} 
+.pos{
+  color: rgb(255, 255, 255);
+  font-size: 1.2vw;
+}
+
+.profile{
+  border: 5px solid rgb(64, 46, 232);
+  border-bottom-left-radius: 10%;
+  margin-top: 2vh;
+  box-shadow: 0 0.7rem rgb(70, 100, 222);
+  /* translate: 2rem; */
+  /* background-color: rgba(141, 37, 37, 0.3); */
+  display: grid;
+  place-items: center;
+  /* background: rgb(214,33,85); */
+background: linear-gradient(94deg, rgb(85, 120, 245) 30%, rgb(70, 66, 66) 66%);
+  /* background-image:url(./card.jpg);
+   */
+  /* background-image:url(card.jpg); */
+  /* background-image:(linear-gradient((rgba(101, 44, 44, 0.3)),url(./card.jpg))); */
+  /* background-position: center;
+  background-size: cover; */
+
+  /* grid-template-columns: 1fr 1fr; */
+  height: 45vh;
+  width: 15vw;
+}
+
+.container{
+ align-items: center;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  /* background-color: rgb(1, 5, 22); */
+  height: 9vh;
+}
+.ele{
+list-style: none;
+font-size: 1.5vh;
+color: rgb(185, 135, 135);
+}
+.logo{
+  list-style: none;
+  font-size: 3.6vw;
+  font-weight: 420;
+  display: grid;
+  /* width: ; */
+  /* garem; */
+}
+.logo_img{
+  height: 5.8vh;
+  width: 2.3vw;
+}
+.Gal_bg{
+background-color: blanchedalmond;
+height: 90vh;
+text-align: center;
+}
+.navL{
+  text-decoration: none;
+  color: aliceblue;
+}
+.active{
+  color: rgb(64, 54, 148);
+}
