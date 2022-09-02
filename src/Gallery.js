@@ -7,7 +7,7 @@ const Gallery = () => {
     <>
     <div className='searchBox'>
 
-    <input className='search_player' type="text" placeholder='search players'></input>
+    {/* <input className='search_player' type="text" placeholder='search players'></input> */}
     </div>
     <Data/>
     {/* <div className='Gal_bg'>Gallery</div> */}

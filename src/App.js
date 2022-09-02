@@ -10,6 +10,7 @@ import View from './View';
 import HOF from './HOF';
 import MOMENTS from './MOMENTS.js';
 import Search from './Search';
+import Teams from './Teams';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path ="view" element= {<View/>}/>
       <Route path ="hof" element= {<HOF/>}/>
       <Route path ="/MOMENTS" element= {<MOMENTS/>}/>
+      <Route path = "/teams" element ={<Teams/>}/>
     </Routes>
   
     {/* <Data/> */}
