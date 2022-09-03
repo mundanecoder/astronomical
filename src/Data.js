@@ -2,6 +2,8 @@ import React from 'react'
 import {useEffect,useState} from 'react'
 import axios from 'axios';
 import Players from './Players';
+import { Alert } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 const Data = () => {
 
@@ -28,8 +30,48 @@ const Data = () => {
     
     },[]);
     
-    // const team = JSON.stringify(team)
+    // const sortItem =() =>
+    // {
+    //   const sortedItem = myData.map((item)=>{
+    //     return item.name.sort();
+      
+    //   })
+
+    //   console.log("helo")
+    //   setBalls(sortedItem)
+
+    // }
     
+
+function sortItem(e){
+
+      // const item = e.target.value;
+      // if(e.target.value==myData.){
+      //   console.log(item)
+      // }
+      console.log(myData.filter((item)=>{
+        const {id} = item
+
+        if(e.target.value == ""){
+          // return alert("does not match")
+          return
+      }
+       else if(e.target.value === id){
+
+
+          console.log("hello",item)
+        }
+      }))
+
+  
+      
+
+}
+
+const display = (e)=>{
+  console.log("hello")
+console.log( e.target.span.value)
+}
     
     
       return  (
@@ -46,8 +88,8 @@ const Data = () => {
     </div>
 
     <div className='sort'>
-            <button className='item'>position</button>
-            <button className='item'>city</button>
+            <input className='item' onChange={sortItem} placeholder= "pos_sort" />
+            {/* <button className='item'>city</button> */}
           </div>
         
         
@@ -66,19 +108,23 @@ const Data = () => {
   })
     .map((players) => {
     const {id,first_name,team,position,last_name} = players;
+
+    // <NavLink to="/detail"></NavLink>
     
     return (
       
-      <div className='profile' key={id}>
+      <NavLink to="/detail"><div className='profile' onClick={display}  key={id}>
         <span className='name'>{first_name.toUpperCase()} {last_name.toUpperCase()}</span><br/>
-        <span className='name'>Position : {position}</span>
-        <p className='pos'>{JSON.stringify(team.city)}</p>
-        <p className='pos1'>{JSON.stringify(team.name)}</p>
+        {/* <span className='name'>Position : {position}</span> */}
+        {/* <p className='pos'>{JSON.stringify(team.city)}</p> */}
+        {/* <p className='pos1'>{JSON.stringify(team.name)}</p> */}
         {/* <p className='pos'>{JSON.stringify(team.)}</p> */}
         
         {/* <p>{team}</p> */}
       
-      </div>)
+      </div>
+      </NavLink>
+      )
       
       
       

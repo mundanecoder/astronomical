@@ -152,16 +152,81 @@ text-align: center;
   display: flex;
   justify-content: center;
   gap: 2vw;
-  background-color: rgb(139, 139, 204);
+  background-color: rgb(166, 166, 219);
   height: 6vh;
   align-items: center;
   
 }
 .sort .item{
-  background-color: rgb(70, 70, 169);
+  background-color: rgb(222, 222, 240);
   list-style: none;
-  width: 8vw;
+  text-align: center;
+  width: 18vw;
   height: 4vh;
-  color: rgb(214, 214, 231);
+  color: rgb(183, 183, 232);
+  /* padding-left: 10px; */
   
+}
+.gal_nav{
+  display: flex;
+  height: 4vh;
+  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+  /* gap: 2vw; */
+  /* background-color: rgb(232, 238, 238); */
+  /* padding: ; */
+
+}
+.gal_nav .G_view{
+  width: 8vw;
+}
+.details{
+  border: 5px solid rgb(161, 36, 36);
+  background: rgb(214,33,85);
+  background: linear-gradient(194deg, rgba(214,33,85,1) 21%, rgba(63,214,182,1) 73%);
+  /* background-color: rgb(166, 166, 211); */
+  /* background-image: url("./bgnba.jpg");
+  background-position: center;
+  background-size: cover;
+   */
+  /* border-radius: 45%; */
+  /* margin-top: 2vh; */
+  /* box-shadow: 0 0.7rem rgb(76, 96, 175); */
+  /* translate: 2rem; */
+  
+  display: grid;
+  place-items: center;
+  height: 70vh;
+  width: 60vw;
+
+}
+.grid1{
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
+  background-color: aliceblue;
+  
+  /* border: 0.3rem solid black; */
+}
+.description{
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.7vw;
+  font-weight: bolder;
+  /* background-color: coral; */
+  margin-bottom: 20%;
+  color: rgb(235, 235, 245);
+}
+.details .pname{
+  margin-top: 20%;
+  color: azure;
+  /* background-color: rgb(180, 207, 207); */
+
+}
+.btn{
+  padding: 2vw;
 }

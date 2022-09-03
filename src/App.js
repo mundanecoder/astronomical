@@ -11,6 +11,7 @@ import HOF from './HOF';
 import MOMENTS from './MOMENTS.js';
 import Search from './Search';
 import Teams from './Teams';
+import Detail from './Detail';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path ="hof" element= {<HOF/>}/>
       <Route path ="/MOMENTS" element= {<MOMENTS/>}/>
       <Route path = "/teams" element ={<Teams/>}/>
+      <Route path = "/detail" element = {<Detail/>}/>
     </Routes>
   
     {/* <Data/> */}
