@@ -158,12 +158,12 @@ text-align: center;
   
 }
 .sort .item{
-  background-color: rgb(222, 222, 240);
+  background-color: rgb(53, 53, 112);
   list-style: none;
   text-align: center;
   width: 18vw;
   height: 4vh;
-  color: rgb(183, 183, 232);
+  color: rgb(205, 205, 229);
   /* padding-left: 10px; */
   
 }
@@ -229,4 +229,25 @@ text-align: center;
 }
 .btn{
   padding: 2vw;
+}
+
+.checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  height: 6vh;
+  background-color: bisque;
+
+}
+.teambtn{
+  width: 8vw;
+  height: 3vh;
+  border: 0.1rem solid rgb(152, 64, 64);
+  display: grid;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  align-items: center;
+  color: wheat;
+
 }

@@ -12,6 +12,8 @@ import MOMENTS from './MOMENTS.js';
 import Search from './Search';
 import Teams from './Teams';
 import Detail from './Detail';
+// import { Params } from 'react-router-dom';
+// import Product from './Product';
 
 
 function App() {
@@ -25,11 +27,12 @@ function App() {
     <Players/>
     <Routes>
       <Route index element= {<Gallery/>}/>
-      <Route path ="view" element= {<View/>}/>
+      <Route path ="/view/:name" element= {<View/>}/>
       <Route path ="hof" element= {<HOF/>}/>
       <Route path ="/MOMENTS" element= {<MOMENTS/>}/>
       <Route path = "/teams" element ={<Teams/>}/>
       <Route path = "/detail" element = {<Detail/>}/>
+      {/* <Route path="/product/:name" component = {Product}/> */}
     </Routes>
   
     {/* <Data/> */}

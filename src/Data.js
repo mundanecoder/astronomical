@@ -9,6 +9,7 @@ const Data = () => {
 
     const [myData, setBalls] = useState([])
     const[pdata,setData] = useState([])
+    const[count,setCount]=useState([])
 
     function getData(e){
       setData(e.target.value)
@@ -43,30 +44,22 @@ const Data = () => {
     // }
     
 
-function sortItem(e){
+const sortItem=(e)=>{
 
-      // const item = e.target.value;
-      // if(e.target.value==myData.){
-      //   console.log(item)
-      // }
-      console.log(myData.filter((item)=>{
-        const {id} = item
+   
+      // console.log(myData.slice(0,4).sort((a,b)=> a.id < b.id?1:-1))
+      setBalls(item=>item.sort((a,b)=>a.id>b.id?1:-1))
+      setCount(item =>item-1)
 
-        if(e.target.value == ""){
-          // return alert("does not match")
-          return
-      }
-       else if(e.target.value === id){
+  }
 
 
-          console.log("hello",item)
-        }
-      }))
+  const Des = ()=>{
+  //   console.log(myData.sort((a,b)=> a.id<b.id?-1:1))}
+    setBalls(item=>item.sort((a,b)=>a.id>b.id?-1:1 ))
+    setCount(item =>item-1)}
 
-  
-      
 
-}
 
 const display = (e)=>{
   console.log("hello")
@@ -88,8 +81,8 @@ console.log( e.target.span.value)
     </div>
 
     <div className='sort'>
-            <input className='item' onChange={sortItem} placeholder= "pos_sort" />
-            {/* <button className='item'>city</button> */}
+            <button className='item' onClick={sortItem} placeholder= "pos_sort" >ASC</button>
+            <button className='item' onClick={Des}>DES</button>
           </div>
         
         
@@ -113,9 +106,9 @@ console.log( e.target.span.value)
     
     return (
       
-      <NavLink to="/detail"><div className='profile' onClick={display}  key={id}>
+      <NavLink to="/detail"><div className='profile' onClick={display}  key={myData.id}>
         <span className='name'>{first_name.toUpperCase()} {last_name.toUpperCase()}</span><br/>
-        {/* <span className='name'>Position : {position}</span> */}
+        <span className='name'>ID: {id}</span>
         {/* <p className='pos'>{JSON.stringify(team.city)}</p> */}
         {/* <p className='pos1'>{JSON.stringify(team.name)}</p> */}
         {/* <p className='pos'>{JSON.stringify(team.)}</p> */}

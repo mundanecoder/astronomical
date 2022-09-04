@@ -1,9 +1,9 @@
 import React from 'react'
 
-const view = () => {
+const View = (match) => {
   return (
-    <div>\\view</div>
+    <div>View {match.Params.name}</div>
   )
 }
 
-export default view
+export default View
