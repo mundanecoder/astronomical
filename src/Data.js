@@ -106,7 +106,7 @@ console.log( e.target.span.value)
     
     return (
       
-      <NavLink to="/detail"><div className='profile' onClick={display}  key={myData.id}>
+      <NavLink to="/detail/:id"><div className='profile' onClick={display}  key={myData.id}>
         <span className='name'>{first_name.toUpperCase()} {last_name.toUpperCase()}</span><br/>
         <span className='name'>ID: {id}</span>
         {/* <p className='pos'>{JSON.stringify(team.city)}</p> */}

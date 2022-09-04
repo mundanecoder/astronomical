@@ -237,11 +237,11 @@ text-align: center;
   align-items: center;
   gap: 1vw;
   height: 6vh;
-  background-color: bisque;
+  /* background-color: bisque; */
 
 }
 .teambtn{
-  width: 8vw;
+  width: 12vw;
   height: 3vh;
   border: 0.1rem solid rgb(152, 64, 64);
   display: grid;

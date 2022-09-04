@@ -5,10 +5,18 @@ import axios from 'axios';
 import { useState ,useEffect} from 'react';
 
 import Button from '@mui/material/Button';
+import { useParams } from 'react-router-dom';
 
 const Detail = () => {
 
     const[details,setDetail]=useState([])
+    const params = useParams()
+    // const{id}=Params
+
+    // const pid = ;
+
+    // console.log(params.id)
+
 
     useEffect(()=>{
         axios
@@ -26,24 +34,18 @@ const Detail = () => {
         navigate(-1)
     }
 
-    const nextFunc=(e)=>{
-        console.log("hello")
-        const n =15;
-        
-        
-
-        // console.log(e.target.id)
+    const nextFunc=()=>{
         axios
-        .get("https://www.balldontlie.io/api/v1/players")
-        .then
-        ((res)=> 
-        console.log(res.data.data["id"])
-        // setDetail(res.data.data.id.value["id=={}"])
-        )
+      .get("https://www.balldontlie.io/api/v1/players/<1>")
+      // .json()
+      .then((res) => console.log(res.data.data)
+    //   setBalls(res.data.data)
+      // .get("https://jsonplaceholder.typicode.com/posts")
+      );
     }
 
     const prevFunc = (e)=>{
-        console.log(e.target.id)
+        
     }
 
   return (
@@ -51,10 +53,18 @@ const Detail = () => {
     
         <Button variant='contained' onClick={previous}>To-Gallery-view</Button>
 
+        <h1>hello </h1>
+
 
     <div className='grid1'>
         {
-            details.slice(0,1).map((item)=>{
+            details
+            .filter((item)=>{
+                if(item.id==params.id){
+                    return details
+                }
+            })
+            .map((item)=>{
 
                 const {id,first_name,team,position,last_name} = item;
                 return (
