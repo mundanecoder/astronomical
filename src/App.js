@@ -12,6 +12,7 @@ import MOMENTS from './MOMENTS.js';
 import Search from './Search';
 import Teams from './Teams';
 import Detail from './Detail';
+import Detail_team from './Detail_team';
 // import Info from './Info';
 // import { Params } from 'react-router-dom';
 // import Product from './Product';
@@ -32,7 +33,8 @@ function App() {
       <Route path ="hof" element= {<HOF/>}/>
       <Route path ="/info/:name" element= {<MOMENTS/>}/>
       <Route path = "/teams" element ={<Teams/>}/>
-      <Route path = "/detail/:id" element = {<Detail/>}/>
+      <Route path = "/detail/:pageno/:playerId" element = {<Detail/>}/>
+      <Route path = "/t_detail/:id" element={<Detail_team/>}/>
       {/* <Route path="/product/:name" component = {Product}/> */}
     </Routes>
   

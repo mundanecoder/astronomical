@@ -31,11 +31,17 @@ const Players = () => {
                 {/* <NavLink className="navL" to="/info">INFO</NavLink > */}
                     
                 {/* </li> */}
+                {/* <li className='ele'> */}
+                {/* <NavLink className="navL" to="/info">VIEW</NavLink> */}
+                {/* </li> */}
                 <li className='ele'>
-                <NavLink className="navL" to="/info">VIEW</NavLink>
-                </li>
-                <li className='ele'>
-                <NavLink className="navL" to="/hof"> ALL-STARS</NavLink>
+                <NavLink className="navL" to={{
+                    pathname:"/hof",
+                    state:{
+                        from:"root"
+                    }
+                }
+                }> ALL-STARS</NavLink>
                    
                 </li>
                 

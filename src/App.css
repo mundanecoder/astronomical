@@ -184,7 +184,7 @@ text-align: center;
 .details{
   border: 5px solid rgb(161, 36, 36);
   background: rgb(214,33,85);
-  background: linear-gradient(194deg, rgba(214,33,85,1) 21%, rgba(63,214,182,1) 73%);
+  background: linear-gradient(194deg, rgb(248, 239, 242) 21%, rgb(97, 134, 126) 73%);
   /* background-color: rgb(166, 166, 211); */
   /* background-image: url("./bgnba.jpg");
   background-position: center;
@@ -214,21 +214,23 @@ text-align: center;
 }
 .description{
   text-align: center;
-  color: rgb(0, 0, 0);
-  font-size: 1.7vw;
+  /* color: rgb(85, 75, 75); */
+  font-size: 1.2vw;
   font-weight: bolder;
   /* background-color: coral; */
   margin-bottom: 20%;
-  color: rgb(235, 235, 245);
+  color: rgb(44, 44, 141);
 }
 .details .pname{
   margin-top: 20%;
-  color: azure;
+  color: rgb(211, 15, 15);
   /* background-color: rgb(180, 207, 207); */
 
 }
 .btn{
   padding: 2vw;
+  font-size: 1.3vw;
+  color: rgb(61, 54, 207);
 }
 
 .checkbox{
@@ -250,4 +252,56 @@ text-align: center;
   align-items: center;
   color: wheat;
 
+}
+.box_disp{
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
+  background-color: aliceblue;
+ 
+
+}
+.T_details{
+  border: 5px solid rgb(161, 36, 36);
+  background: rgb(214,33,85);
+  background: linear-gradient(194deg, rgb(223, 70, 15) 21%, rgb(160, 10, 25) 73%);
+  /* background-color: rgb(166, 166, 211); */
+  /* background-image: url("./bgnba.jpg");
+  background-position: center;
+  background-size: cover;
+   */
+  /* border-radius: 45%; */
+  /* margin-top: 2vh; */
+  /* box-shadow: 0 0.7rem rgb(76, 96, 175); */
+  /* translate: 2rem; */
+  
+  display: grid;
+  place-items: center;
+  height: 70vh;
+  width: 60vw;
+
+}
+.t_bttn{
+  height: 10vh;
+  width: 7vw;
+  background-color: rgb(192, 123, 44);
+  
+}
+.team_description{
+  color: white;
+  font-size: 1.2vw;
+}
+.special{
+  color: rgb(0, 191, 255);
+  font-size: 1.4vw;
+}
+.btn_container{
+  height: 5vh;
+  background-color:aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

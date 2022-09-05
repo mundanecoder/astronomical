@@ -1,6 +1,7 @@
 import React from 'react'
 import {useEffect,useState} from 'react'
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 
 const Teams = () => {
@@ -43,7 +44,7 @@ setCount(item=>item-1)
 }
 
 const disp2=()=>{
-  setTeams(item=>item.sort((a,b)=>a.id>b.id?-1:1 ))
+  setTeams(item=>item.sort((a,b)=>a.id>b.id?1:-1 ))
 setCount(item=>item-1)
 
   
@@ -88,12 +89,14 @@ setCount(item=>item-1)
             <>
 
     
-            <div className='teams_nba'>
+           <NavLink to = {"/t_detail/"+id}>
+             <div className='teams_nba'>
               
             <h1>{name}</h1>
             <h1>{conference}</h1>
             <h1>{id}</h1>
             </div>
+            </NavLink>
 
             
             </>

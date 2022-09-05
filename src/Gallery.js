@@ -11,10 +11,10 @@ const Gallery = () => {
     <>
     {/* <BrowserRouter> */}
   <div className='gal_nav'>
-    <span className='G_view'><NavLink to="/">Gallery</NavLink>  </span>
+    {/* <span className='G_view'><NavLink to="/">Gallery</NavLink>  </span> */}
   
 
-    <span className='G_view'><NavLink to="/detail">Detailed_View</NavLink></span>
+    {/* <span className='G_view'><NavLink to="/detail">Detailed_View</NavLink></span> */}
     
     
   </div>
