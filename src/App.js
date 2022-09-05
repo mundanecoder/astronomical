@@ -30,7 +30,7 @@ function App() {
     <Routes>
       <Route index element= {<Gallery/>}/>
       {/* <Route path ="info " element= {<Info/>}/> */}
-      <Route path ="hof" element= {<HOF/>}/>
+      {/* <Route path ="hof" element= {<HOF/>}/> */}
       <Route path ="/info/:name" element= {<MOMENTS/>}/>
       <Route path = "/teams" element ={<Teams/>}/>
       <Route path = "/detail/:pageno/:playerId" element = {<Detail/>}/>

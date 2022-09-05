@@ -121,8 +121,12 @@ const display = (e)=>{
 
     </div>
 
+    <div className='pages_btn'>
+
+
     <button onClick={prevPage}>prev-page</button>
     <button onClick={nextpage}>next-page</button>
+    </div>
 
     <div className='sort'>
             <button className='item' onClick={sortItem} placeholder= "pos_sort" >ASC</button>

@@ -305,3 +305,13 @@ text-align: center;
   justify-content: center;
   align-items: center;
 }
+.pages_btn{
+  height: 5vh;
+  width: 100vw;
+  background-color: rgb(209, 188, 188);
+  display: flex;
+  position:fixed;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6vh;
+}

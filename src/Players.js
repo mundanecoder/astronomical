@@ -34,7 +34,7 @@ const Players = () => {
                 {/* <li className='ele'> */}
                 {/* <NavLink className="navL" to="/info">VIEW</NavLink> */}
                 {/* </li> */}
-                <li className='ele'>
+                {/* <li className='ele'>
                 <NavLink className="navL" to={{
                     pathname:"/hof",
                     state:{
@@ -43,7 +43,7 @@ const Players = () => {
                 }
                 }> ALL-STARS</NavLink>
                    
-                </li>
+                </li> */}
                 
             </div>
         </nav>
