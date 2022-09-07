@@ -53,7 +53,8 @@ setCount(item=>item-1)
   return (
     
     <>
-    <div className='team_bg'>    
+    {/* <div className='team_bg'> */}
+    {/* <div className='team_bg'>     */}
     <div className='checkbox'>
    <span className='teambtn' onClick={disp}>CITY</span>
    <span className='teambtn' onClick={disp1}>CONFERENCE</span>
@@ -87,18 +88,30 @@ setCount(item=>item-1)
           const {name,conference,id,city} = team;
           return(
             <>
-
-    
            <NavLink to = {"/t_detail/"+id}>
              <div className='teams_nba'>
+
+
+    
               
-            <h1>{name}</h1>
-            <h1>{conference}</h1>
-            <h1>{id}</h1>
+            
+
+            <div className='nba_tm_id'>
+            <h1 className='tt_txt'>{id}</h1>
             </div>
-            </NavLink>
+
+            <div className='nba_team'>
+            <h1 className='tt_txt'>{name.toUpperCase()}</h1>
+            </div>
+
+            <div className='nba_conference'>
+            <h1 className='tt_txt'>{conference}</h1>
+            </div>
+
+            </div>
 
             
+            </NavLink>
             </>
           )
         })
@@ -107,7 +120,8 @@ setCount(item=>item-1)
 
       }    
     </div>
-    </div>
+    {/* </div> */}
+    {/* </div> */}
 
     </>
   

@@ -111,7 +111,7 @@ const display = (e)=>{
     
     
           <>
-          <div className='list_bg'>
+          <div className='team_bg'>
           
           
 
@@ -160,8 +160,8 @@ const display = (e)=>{
     return (
       
       <NavLink to = {`/detail/${pageno}/${playerId} `} ><div className='list_profile'  key={myData.id}>
-        <span className='name'>{first_name.toUpperCase()} {last_name.toUpperCase()}</span><br/>
-        <span className='name'>ID: {playerId}</span>
+        <span className='namelist'>{first_name.toUpperCase()} {last_name.toUpperCase()}</span><br/>
+        <span className='namelist'>ID: {playerId}</span>
         {/* <p className='pos'>{JSON.stringify(team.city)}</p> */}
         {/* <p className='pos1'>{JSON.stringify(team.name)}</p> */}
         {/* <p className='pos'>{JSON.stringify(team.)}</p> */}
