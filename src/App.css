@@ -1,94 +1,166 @@
-
 .App {
   text-align: center;
 }
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin: 2vw;
   /* justify-content: center; */
   text-align: center;
   place-items: center;
   /* background-color: blue; */
-
 }
-.searchBox{
+.list_bg{
+  background-color: rgb(130, 141, 141);
+}
+.searchBox {
   display: grid;
   place-items: center;
   height: 5vh;
   /* background-color: aqua; */
   /* text-align: center; */
 }
-.search_player{
+.search_player {
   height: 3vh;
 }
 
-.nba{
-  color: rgb(237, 240, 249);
+.nba {
+  color: rgb(241, 244, 248);
+  font-size: 8vh;
 }
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(5, 5, 5);
+  background-color: rgb(3, 3, 3);
   height: 8vh;
   place-items: center;
-  
 }
-  .name{ 
-  color: rgb(255, 255, 255);
-  /* background-color: rgb(49, 49, 158); */
-  text-align: center;
-  font-weight: bolder;
-  background-color:rgba(124, 124, 183,0.7);
 
-} 
-.pos{
+.pos {
   color: rgb(255, 255, 250);
   font-size: 1.2vw;
   background-color: rgba(144, 153, 183, 0.7);
 }
-.pos1{
+.pos1 {
   color: rgb(245, 247, 245);
   font-size: 1.2vw;
-  background-color: rgba(166, 169, 214,0.7);
+  background-color: rgba(93, 98, 158, 0.7);
 }
-.find{
+.find {
   text-align: center;
 }
-.find input{
+.find input {
   height: 4vh;
   width: 10vw;
   /* font-size: 20px; */
-  padding-left: 15px;
-  border: 0.4vh solid blueviolet;
-
-  
+  /* padding-left: 20px; */
+  text-align: center;
+  border: 0.2rem solid rgb(71, 4, 134);
 }
 
-.profile{
-  border: 5px solid rgb(174, 48, 117);
-  border-bottom-left-radius: 10%;
+.profile {
+  border: 5px solid rgb(92, 92, 92);
+  border-radius: 10%;
   margin-top: 2vh;
-  box-shadow: 0 0.7rem rgb(156, 164, 197);
+  box-shadow: 0.5rem 0.7rem rgb(156, 164, 197);
+  /* box-shadow: 0 0.7rem rgb(156, 164, 197); */
   /* translate: 2rem; */
   /* background-color: rgba(141, 37, 37, 0.3); */
   display: grid;
+  grid-template-rows: 6vh 1fr;
+
   place-items: center;
   /* background: rgb(214,33,85); */
-/* background: linear-gradient(94deg, rgb(85, 120, 245) 30%, rgb(147, 42, 42) 66%); */
-   background-image:url(./card.jpg); 
-   
+  /* background: linear-gradient(94deg, rgb(85, 120, 245) 30%, rgb(147, 42, 42) 66%); */
+  /* background-image: url(./card.jpg); */
+
   /* background-image:url(card.jpg); */
   /* background-image:(linear-gradient((rgba(101, 44, 44, 0.3)),url(./card.jpg))); */
-  background-position: center; 
-  background-size: cover; 
+  /* background-position: center; */
+  /* background-size: cover; */
 
   /* grid-template-columns: 1fr 1fr; */
-  height: 45vh;
-  width: 15vw;
+  height: 55vh;
+  width: 20vw;
+  opacity: 0.9;
 }
-.teams_nba{
+.data_id{
+  height: 6vh;
+  width: 15vw;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  /* border-top-left-radius: 10%; */
+  /* border-top-right-radius: 12%; */
+}
+.data_page{
+  /* background-color: rgb(207, 32, 41); */
+  border-top:solid black ;
+  /* height: 38vh; */
+  width: 15vw;
+  display: grid;
+  grid-template-rows: 1fr 8vh;
+
+  justify-content: center;
+  align-items: center;
+
+}
+.profile_img{
+  height: 35vh;
+  width: 15vw;
+  background-image: url(./img/ppic.png);
+  background-position: center;
+  background-size: 35vh 18vw;
+  /* background-color: blue */
+}
+.data_name{
+  height: 6vh;
+  display: grid;
+  /* margin-top: 4vh; */
+  justify-content: center;
+  align-items: center;
+  border-top: solid black;
+  /* border-bottom: solid black; */
+  
+}
+
+.name_id {
+  color: rgb(0, 0, 0);
+  /* background-color: rgb(49, 49, 158); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  font-weight: bolder;
+  border-radius: 50%;
+  margin-right: 2rem;
+  background-color: rgba(124, 124, 183, 0.7);
+  height: 5vh;
+  width: 2.5vw;
+}
+.name {
+  color: rgb(255, 255, 255);
+  
+  /* background-color: rgb(49, 49, 158); */
+  text-align: center;
+  font-weight: bolder;
+  color: black;
+  /* background-color: rgba(124, 124, 183, 0.7); */
+}
+.pages_btn {
+  height: 5vh;
+  width: 99.5vw;
+  /* background-color: rgb(209, 188, 188); */
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15%;
+}
+.teams_nba {
   border: 5px solid rgb(197, 175, 175);
   border-radius: 45%;
   margin-top: 2vh;
@@ -98,33 +170,34 @@
   display: grid;
   place-items: center;
   /* background: rgb(214,33,85); */
-/* background: linear-gradient(94deg, rgb(85, 120, 245) 30%, rgb(147, 42, 42) 66%); */
-   /* background-image:url(./card.jpg);  */
-   
-  background-image:url(PLAYER.jpg);
+  /* background: linear-gradient(94deg, rgb(85, 120, 245) 30%, rgb(147, 42, 42) 66%); */
+  /* background-image:url(./card.jpg);  */
+
+  background-image: url(PLAYER.jpg);
   /* background-image:(linear-gradient((rgba(101, 44, 44, 0.3)),url(./card.jpg))); */
-  background-position: center; 
-  background-size: cover; 
+  background-position: center;
+  background-size: cover;
 
   /* grid-template-columns: 1fr 1fr; */
   height: 30vh;
   width: 15vw;
 }
+/* .Gal_bg */
 
-.container{
- align-items: center;
+.container {
+  align-items: center;
   display: flex;
   justify-content: space-around;
   gap: 2rem;
   /* background-color: rgb(1, 5, 22); */
   height: 9vh;
 }
-.ele{
-list-style: none;
-font-size: 1.5vh;
-color: rgb(185, 135, 135);
+.ele {
+  list-style: none;
+  font-size: 1.5vh;
+  color: rgb(180, 149, 149);
 }
-.logo{
+.logo {
   list-style: none;
   font-size: 3.6vw;
   font-weight: 420;
@@ -132,42 +205,54 @@ color: rgb(185, 135, 135);
   /* width: ; */
   /* garem; */
 }
-.logo_img{
+.logo_img {
   height: 5.8vh;
   width: 2.3vw;
 }
-.Gal_bg{
-background-color: blanchedalmond;
-height: 90vh;
-text-align: center;
+.gal_bg {
+  /* background-color: rgb(214, 207, 214); */
+  height: 100%;
+  text-align: center;
+  /* background-image: url("./img/gal_bg.jpg"); */
+  /* background-attachment: fixed; */
+   
+  /* background-position: center; */
+  /* background-size: cover; */
+  
 }
-.navL{
+.navL {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(231, 230, 230);
 }
-.active{
-  color: rgb(64, 54, 148);
+.active {
+  color: rgb(128, 117, 228);
 }
-.sort{
+.sort {
   display: flex;
   justify-content: center;
   gap: 2vw;
-  background-color: rgb(166, 166, 219);
+  /* background-color: rgb(144, 144, 230); */
   height: 6vh;
   align-items: center;
-  
+  /* border-bottom: 0.3rem solid rgb(30, 33, 206); */
+  /* border-top: 0.3rem solid rgb(231, 16, 16); */
 }
-.sort .item{
-  background-color: rgb(53, 53, 112);
+.sort .item {
+  background-color: rgb(131, 131, 150);
   list-style: none;
-  text-align: center;
-  width: 18vw;
+  justify-content: center;
+  width: 4vw;
   height: 4vh;
+  /* border-radius: 50%; */
   color: rgb(205, 205, 229);
+  display: flex;
+  align-items: center;
   /* padding-left: 10px; */
-  
 }
-.gal_nav{
+.s_txt{
+  color: rgb(14, 12, 12);
+}
+.gal_nav {
   display: flex;
   height: 4vh;
   /* justify-content: space-around; */
@@ -176,15 +261,19 @@ text-align: center;
   /* gap: 2vw; */
   /* background-color: rgb(232, 238, 238); */
   /* padding: ; */
-
 }
-.gal_nav .G_view{
+.gal_nav .G_view {
   width: 8vw;
 }
-.details{
-  border: 5px solid rgb(161, 36, 36);
-  background: rgb(214,33,85);
-  background: linear-gradient(194deg, rgb(248, 239, 242) 21%, rgb(97, 134, 126) 73%);
+.details {
+  /* #dede18 */
+  /* border: 0.2rem solid rgb(236, 118, 8); */
+  border-top: 0.5rem solid rgb(5, 50, 250);
+  border-left: 0.5rem solid rgb(1, 67, 248);
+  border-right: 0.5rem solid rgb(252, 4, 4);
+  border-bottom: 0.5rem solid rgb(250, 0, 0);
+  background: rgb(49, 48, 49);
+  background: linear-gradient(194deg, rgb(78, 78, 78) 21%, rgb(12, 12, 12) 73%);
   /* background-color: rgb(166, 166, 211); */
   /* background-image: url("./bgnba.jpg");
   background-position: center;
@@ -194,55 +283,99 @@ text-align: center;
   /* margin-top: 2vh; */
   /* box-shadow: 0 0.7rem rgb(76, 96, 175); */
   /* translate: 2rem; */
-  
+  /* z-index: 99999; */
+
   display: grid;
   place-items: center;
   height: 70vh;
   width: 60vw;
-
+  opacity: 0.6;
 }
-.grid1{
+.detail_box {
+  display: grid;
+  grid-template-rows: 8vh 1fr;
+}
+.grid1 {
   width: 100vw;
   height: 80vh;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2vw;
-  background-color: aliceblue;
-  
+  /* background-color: aliceblue; */
+
   /* border: 0.3rem solid black; */
 }
-.description{
+.description {
   text-align: center;
   /* color: rgb(85, 75, 75); */
-  font-size: 1.2vw;
-  font-weight: bolder;
+  font-size: 1.5vw;
+  font-weight: 900;
+  /* background-color: brown; */
+  /* height: 50vh; */
   /* background-color: coral; */
   margin-bottom: 20%;
-  color: rgb(44, 44, 141);
+  color: rgb(255, 255, 255);
+  font-family: "Bree Serif", serif;
+  /* font-family: "EB Garamond", serif; */
+  /* font-family: "Kanit", sans-serif; */
+  /* font-family: "Pacifico", cursive; */
+  /* font-family: "PT Serif", serif; */
+  /* z-index: 9999999999; */
 }
-.details .pname{
-  margin-top: 20%;
-  color: rgb(211, 15, 15);
+.des_box{
+  display: grid;
+  place-items: center;
+  height: 56vh;
+  /* background-color: brown; */
+}
+.head {
+  background-color: rgb(10, 8, 8);
+  border: 0.2rem solid rgb(114, 110, 110);
+  height: 8vh;
+  width: 59vw;
+  margin-top: 0;
+  display: grid;
+  place-items: center;
+  /* padding-top: ; */
+}
+.details .pname {
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  /* background-color: aqua; */
+  /* margin-top: 20%; */
+  color: rgb(233, 225, 225);
   /* background-color: rgb(180, 207, 207); */
-
 }
-.btn{
+.btn {
+  /* border-top: 0.2rem solid rgb(219, 216, 216); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2vw;
-  font-size: 1.3vw;
-  color: rgb(61, 54, 207);
+  width: 8vw;
+  height: 2vh;
+  font-weight: bolder;
+  font-family: "Pacifico", cursive;
+  font-size: 0.9vw;
+  /* background-color: transparent;
+   */
+  /* background: rgb(233, 224, 226); */
+  /* background: linear-gradient(194deg, rgb(15, 15, 15) 21%, rgb(90, 92, 91) 73%); */
+  opacity: 0.74;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
 }
 
-.checkbox{
+.checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1vw;
   height: 6vh;
   /* background-color: bisque; */
-
 }
-.teambtn{
+.teambtn {
   width: 12vw;
   height: 3vh;
   border: 0.1rem solid rgb(152, 64, 64);
@@ -251,9 +384,8 @@ text-align: center;
   text-align: center;
   align-items: center;
   color: wheat;
-
 }
-.box_disp{
+.box_disp {
   width: 100vw;
   height: 80vh;
   display: grid;
@@ -261,14 +393,16 @@ text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2vw;
   background-color: aliceblue;
- 
-
 }
-.T_details{
-  border: 5px solid rgb(161, 36, 36);
-  background: rgb(214,33,85);
-  background: linear-gradient(194deg, rgb(223, 70, 15) 21%, rgb(160, 10, 25) 73%);
-  /* background-color: rgb(166, 166, 211); */
+.T_details {
+  border: 5px solid rgb(194, 169, 169);
+  background: rgb(214, 33, 85);
+  background: linear-gradient(
+    194deg,
+    rgb(84, 60, 192) 21%,
+    rgb(117, 163, 43) 73%
+  );
+  /* background-color: rgb(166, 166, 211); 
   /* background-image: url("./bgnba.jpg");
   background-position: center;
   background-size: cover;
@@ -277,41 +411,74 @@ text-align: center;
   /* margin-top: 2vh; */
   /* box-shadow: 0 0.7rem rgb(76, 96, 175); */
   /* translate: 2rem; */
-  
+
   display: grid;
   place-items: center;
   height: 70vh;
   width: 60vw;
-
 }
-.t_bttn{
+.t_bttn {
   height: 10vh;
   width: 7vw;
-  background-color: rgb(192, 123, 44);
-  
+  border: 0.2rem solid rgb(109, 89, 89);
+  background-color: rgb(71, 127, 201);
+  border-radius: 20%;
+  box-shadow: 0 0.4rem rgb(192, 180, 180);
 }
-.team_description{
+.team_description {
   color: white;
   font-size: 1.2vw;
 }
-.special{
+.special {
   color: rgb(0, 191, 255);
   font-size: 1.4vw;
 }
-.btn_container{
+.btn_container {
   height: 5vh;
-  background-color:aqua;
+  /* background-color:aqua; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.pages_btn{
-  height: 5vh;
-  width: 100vw;
-  background-color: rgb(209, 188, 188);
-  display: flex;
-  position:fixed;
-  align-items: center;
-  justify-content: center;
-  margin-top: 6vh;
+
+.grid_list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* gap: 1.5rem; */
+  margin: 2vw;
+  /* justify-content: center; */
+  text-align: center;
+  place-items: center;
+}
+.list_profile {
+  border: 5px solid rgb(173, 163, 169);
+  border-bottom-left-radius: 10%;
+  margin-top: 2vh;
+  box-shadow: 0 0.7rem rgb(13, 12, 14);
+  /* translate: 2rem; */
+  /* background-color: rgba(141, 37, 37, 0.3); */
+  display: grid;
+  place-items: center;
+  background: rgb(71, 73, 160);
+  /* background: linear-gradient(94deg, rgb(85, 120, 245) 30%, rgb(147, 42, 42) 66%); */
+  /* background-image:url(./card.jpg);  */
+
+  /* background-image:url(card.jpg); */
+  /* background-image:(linear-gradient((rgba(101, 44, 44, 0.3)),url(./card.jpg))); */
+  background-position: center;
+  background-size: cover;
+
+  /* grid-template-columns: 1fr 1fr; */
+  height: 8vh;
+  width: 80vw;
+}
+.p_detail {
+  background-image: url("./img/canva_nba.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  /* opacity: 0.7; */
+}
+.team_bg{
+  background-color: rgb(252, 245, 245);
 }

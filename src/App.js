@@ -13,6 +13,8 @@ import Search from './Search';
 import Teams from './Teams';
 import Detail from './Detail';
 import Detail_team from './Detail_team';
+import List from './List'
+// import List_view from './List_view'
 // import Info from './Info';
 // import { Params } from 'react-router-dom';
 // import Product from './Product';
@@ -29,8 +31,10 @@ function App() {
     <Players/>
     <Routes>
       <Route index element= {<Gallery/>}/>
+      <Route path ="/list" element ={<List/>}/>
+    
       {/* <Route path ="info " element= {<Info/>}/> */}
-      {/* <Route path ="hof" element= {<HOF/>}/> */}
+      <Route path ="hof" element= {<HOF/>}/>
       <Route path ="/info/:name" element= {<MOMENTS/>}/>
       <Route path = "/teams" element ={<Teams/>}/>
       <Route path = "/detail/:pageno/:playerId" element = {<Detail/>}/>

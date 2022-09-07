@@ -53,7 +53,7 @@ setCount(item=>item-1)
   return (
     
     <>
-    
+    <div className='team_bg'>    
     <div className='checkbox'>
    <span className='teambtn' onClick={disp}>CITY</span>
    <span className='teambtn' onClick={disp1}>CONFERENCE</span>
@@ -107,6 +107,8 @@ setCount(item=>item-1)
 
       }    
     </div>
+    </div>
+
     </>
   
   )

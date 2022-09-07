@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from "./nba.png"
 import { NavLink } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const Players = () => {
+    const location = useLocation();
+
+    console.log(location)
   return (
     <div>
 
@@ -21,29 +25,27 @@ const Players = () => {
         <nav>
             <div className='container'>
                 <li className='ele'>
-                <NavLink className="navL" to="/">GALLERY</NavLink >
+                <NavLink className="navL" to={{
+                    pathname:'/',
+                    state : {say : "hello !"}
+                }}>GALLERY</NavLink >
+                    
+                </li>
+                <li className='ele'>
+                <NavLink className="navL" to="/list">LIST-VIEW</NavLink >
                     
                 </li>
                 <li className='ele'>
                 <NavLink className="navL" to="/teams">TEAMS</NavLink>
                 </li>
-                {/* <li className='ele'> */}
-                {/* <NavLink className="navL" to="/info">INFO</NavLink > */}
-                    
-                {/* </li> */}
+                
                 {/* <li className='ele'> */}
                 {/* <NavLink className="navL" to="/info">VIEW</NavLink> */}
                 {/* </li> */}
-                {/* <li className='ele'>
-                <NavLink className="navL" to={{
-                    pathname:"/hof",
-                    state:{
-                        from:"root"
-                    }
-                }
-                }> ALL-STARS</NavLink>
+                {/* <li className='ele'>  */}
+                {/* <NavLink className="navL" to="/hof"> ALL-STARS</NavLink> */}
                    
-                </li> */}
+                {/* </li>  */}
                 
             </div>
         </nav>

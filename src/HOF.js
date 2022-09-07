@@ -22,7 +22,7 @@ const HOF = () => {
 
 
   return (
-<h1>hello</h1>
+{/* <h1>hello {location.pathname}</h1> */}
     // <>
     // <div>
     //   {
