@@ -15,11 +15,18 @@ const Players = () => {
         
     </div>
         <div className='navbar'>
-                
-            <li className='logo' >
+            <div className='logo_box'>
 
-                <span className='nba'><img className='logo_img' src={logo}/>NBA</span>
+                
+
+            <li className='logo' >
+                <span className='nba'><img className='logo_img' src={logo}/></span>
+                
             </li>
+            <li className='logo'>
+            <span className='nba'>NBA</span>
+            </li>
+            </div>
             
 
         <nav>

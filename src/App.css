@@ -27,14 +27,33 @@
 
 .nba {
   color: rgb(241, 244, 248);
-  font-size: 8vh;
+  font-size: 4.2rem;
+  font-weight: 400;
+  font-family: "Bree Serif", serif;
 }
 .navbar {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(3, 3, 3);
-  height: 8vh;
+  background-color: rgb(0, 0, 0);
+  height: 10vh;
   place-items: center;
+  /* gap: 2vh; */
+}
+.logo_box{
+  display: flex;
+  gap: 0.4vw;
+}
+.logo {
+  list-style: none;
+  font-size: 3.6vw;
+  font-weight: 420;
+  /* display: grid; */
+  /* width: ; */
+  /* garem; */
+}
+.logo_img {
+  height: 5.4vh;
+  width: 2.3vw;
 }
 
 .pos {
@@ -47,17 +66,7 @@
   font-size: 1.2vw;
   background-color: rgba(93, 98, 158, 0.7);
 }
-.find {
-  text-align: center;
-}
-.find input {
-  height: 4vh;
-  width: 10vw;
-  /* font-size: 20px; */
-  /* padding-left: 20px; */
-  text-align: center;
-  border: 0.2rem solid rgb(71, 4, 134);
-}
+
 
 .profile {
   border: 5px solid rgb(92, 92, 92);
@@ -153,12 +162,59 @@
 .pages_btn {
   height: 5vh;
   width: 99.5vw;
-  /* background-color: rgb(209, 188, 188); */
+  background-color: transparent;
+  /* opacity: 0; */
   display: flex;
-  position: fixed;
+  /* position: absolu; */
   align-items: center;
+  justify-content: center;
+  position: fixed;
   justify-content: space-between;
-  margin-top: 15%;
+  /* margin-top: 15%; */
+}
+.pages_btn_fixed{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.page_change{
+  background-color: rgb(153, 180, 212);
+  width: 5vw;
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.find {
+  text-align: center;
+}
+.find input {
+  height: 4vh;
+  width: 30vw;
+  /* font-size: 20px; */
+  /* padding-left: 20px; */
+  text-align: center;
+  border-radius:10% ;
+  border: 0.2rem solid rgb(172, 143, 199);
+}
+.find .inputL {
+  margin-top: 2%;
+  height: 4vh;
+  width: 30vw;
+  /* font-size: 20px; */
+  /* padding-left: 20px; */
+  text-align: center;
+  border-radius:10% ;
+  border: 0.2rem solid rgb(172, 143, 199);
+}
+.search_nav{
+  /* background-color: aqua; */
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 .teams_nba {
   border: 5px solid rgb(197, 175, 175);
@@ -197,18 +253,7 @@
   font-size: 1.5vh;
   color: rgb(180, 149, 149);
 }
-.logo {
-  list-style: none;
-  font-size: 3.6vw;
-  font-weight: 420;
-  display: grid;
-  /* width: ; */
-  /* garem; */
-}
-.logo_img {
-  height: 5.8vh;
-  width: 2.3vw;
-}
+
 .gal_bg {
   /* background-color: rgb(214, 207, 214); */
   height: 100%;
@@ -230,21 +275,22 @@
 .sort {
   display: flex;
   justify-content: center;
-  gap: 2vw;
+  /* gap: 2vw; */
   /* background-color: rgb(144, 144, 230); */
   height: 6vh;
+  /* width: 7vw; */
   align-items: center;
   /* border-bottom: 0.3rem solid rgb(30, 33, 206); */
   /* border-top: 0.3rem solid rgb(231, 16, 16); */
 }
 .sort .item {
-  background-color: rgb(131, 131, 150);
+  background-color: rgb(139, 139, 189);
   list-style: none;
   justify-content: center;
-  width: 4vw;
+  width: 6vw;
   height: 4vh;
   /* border-radius: 50%; */
-  color: rgb(205, 205, 229);
+  color: rgb(8, 8, 8);
   display: flex;
   align-items: center;
   /* padding-left: 10px; */
@@ -302,6 +348,7 @@
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2vw;
+  /* top: 30%; */
   /* background-color: aliceblue; */
 
   /* border: 0.3rem solid black; */
@@ -358,6 +405,7 @@
   font-weight: bolder;
   font-family: "Pacifico", cursive;
   font-size: 0.9vw;
+  cursor: pointer;
   /* background-color: transparent;
    */
   /* background: rgb(233, 224, 226); */
@@ -449,17 +497,19 @@
   /* justify-content: center; */
   text-align: center;
   place-items: center;
+  
 }
 .list_profile {
-  border: 5px solid rgb(173, 163, 169);
+  /* top: 40%; */
+  border: 5px solid rgb(235, 226, 231);
   border-bottom-left-radius: 10%;
   margin-top: 2vh;
-  box-shadow: 0 0.7rem rgb(13, 12, 14);
+  box-shadow: 0 0.7rem rgb(218, 212, 224);
   /* translate: 2rem; */
   /* background-color: rgba(141, 37, 37, 0.3); */
   display: grid;
   place-items: center;
-  background: rgb(71, 73, 160);
+  background: rgb(110, 33, 182);
   /* background: linear-gradient(94deg, rgb(85, 120, 245) 30%, rgb(147, 42, 42) 66%); */
   /* background-image:url(./card.jpg);  */
 

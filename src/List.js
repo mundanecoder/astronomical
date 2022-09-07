@@ -117,7 +117,7 @@ const display = (e)=>{
 
       <div className='find'>
         {/* <h1>Get Input Box Value</h1> */}
-        <input type="text" placeholder='search players' onChange={getData}/>
+        <input type="text" className="inputL" placeholder='search players' onChange={getData}/>
         <h3>You are looking for  {pdata}</h3>
 
     </div>
