@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Players from "./Players";
 import { Alert } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { Location, useLocation } from "react-router-dom";
 import propic from "./card.jpg";
 // import List from './List'
@@ -16,6 +16,7 @@ const Data = () => {
   const [count, setCount] = useState([]);
   // const [stickyClass, page_changebar] = useState("");
   const [pageno, setpageno] = useState(1);
+  const [playerId,setplayerId] = useState([0]);
 
   //// using hooks useState to store api data and update accordingly
 
@@ -23,6 +24,47 @@ const Data = () => {
     setData(e.target.value);
     // const text = "e.taget.value"
   }
+
+  const navigate = useNavigate();
+  
+
+    // setplayerId(item=>item = )
+    console.log("clicked")
+
+    const change = ()=>{
+      myData
+          .filter((players) => {
+            const { first_name, id, last_name } = players;
+            if (pdata == "") {
+              return players;
+            } else if (
+              players.first_name.toLowerCase().includes(pdata.toLowerCase())
+            ) {
+              return players;
+            }
+          })
+          .map((players) => {
+            return players
+            
+          })
+          // const sendData = (e)=>{
+
+          navigate('/detail/${pageno}/${playerId}',{
+            state:{
+              hi:"hello",
+              age:29
+            }
+          })
+        // }
+    }
+
+
+
+   
+
+  console.log(playerId)
+
+  
 
   const nextpage = () => {
     if (pageno == 30) {
@@ -73,13 +115,23 @@ const Data = () => {
     }
     return 0;
   });
-
   const Des = () => {
     /// sorting array with compare method (sort) to display value sorted by specific property
 
     setBalls((item) => item.sort((a, b) => (a.id > b.id ? -1 : 1)));
     setCount((item) => item - 1);
   };
+
+
+
+
+
+  // const toComponent = ()=>{
+  
+    // onClick={toComponent}
+
+  //   Navigate(`/detail/${pageno}/${playerId}`,{state:{pageNo : pageno, say:"hello"}})
+  // }
 
   return (
     <>
@@ -130,6 +182,8 @@ const Data = () => {
           })
           .map((players) => {
             const { first_name, team, position, last_name } = players;
+            // setplayerId(item=>item+1)
+
             const playerId = players.id;
             // console.log(playerId)
 
@@ -137,7 +191,7 @@ const Data = () => {
 
             // console.log(pageno)
             return (
-              <NavLink to={`/detail/${pageno}/${playerId} `}>
+              <NavLink to={`/detail/${pageno}/${playerId}`} onClick={change} >
                 <div className="profile" key={myData.id}>
                   <div className="data_id">
                     <span className="name_id">{playerId}</span>

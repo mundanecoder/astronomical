@@ -569,3 +569,9 @@
 .team_bg{
   background-color: rgb(252, 245, 245);
 }
+.idid{
+  font-size: 1.6vw;
+  color: white;
+  font-weight: 700;
+  /* font-size: larger; */
+}

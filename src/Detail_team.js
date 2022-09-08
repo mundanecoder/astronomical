@@ -72,6 +72,8 @@ const Detail_team = () => {
 
         params.id= Pid[current_id-1]
 
+        navigate()
+
       }
 
 

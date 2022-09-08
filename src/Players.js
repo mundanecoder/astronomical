@@ -46,13 +46,13 @@ const Players = () => {
                 <NavLink className="navL" to="/teams">TEAMS</NavLink>
                 </li>
                 
-                {/* <li className='ele'> */}
-                {/* <NavLink className="navL" to="/info">VIEW</NavLink> */}
-                {/* </li> */}
-                {/* <li className='ele'>  */}
+                <li className='ele'>
+                {/* <NavLink className="navL" to="/info">MOMents</NavLink> */}
+                </li>
+                <li className='ele'> 
                 {/* <NavLink className="navL" to="/hof"> ALL-STARS</NavLink> */}
                    
-                {/* </li>  */}
+                </li> 
                 
             </div>
         </nav>

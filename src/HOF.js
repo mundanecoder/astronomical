@@ -4,8 +4,14 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 
 const HOF = () => {
-  const location=useLocation()
-  console.log(location)
+
+    const location = useLocation();
+    console.log(location.state)
+
+
+
+  
+
 
   // const[stats,setStats]= useState([])
 
@@ -22,7 +28,7 @@ const HOF = () => {
 
 
   return (
-{/* <h1>hello {location.pathname}</h1> */}
+ <h1>hello{location.state.age} </h1> 
     // <>
     // <div>
     //   {

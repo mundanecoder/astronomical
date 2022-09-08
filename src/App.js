@@ -34,8 +34,8 @@ function App() {
       <Route path ="/list" element ={<List/>}/>
     
       {/* <Route path ="info " element= {<Info/>}/> */}
-      <Route path ="hof" element= {<HOF/>}/>
-      <Route path ="/info/:name" element= {<MOMENTS/>}/>
+      {/* <Route path ="hof" element= {<HOF/>}/> */}
+      {/* <Route path ="/info"  element= {<MOMENTS/>}/> */}
       <Route path = "/teams" element ={<Teams/>}/>
       <Route path = "/detail/:pageno/:playerId" element = {<Detail/>}/>
       <Route path = "/t_detail/:id" element={<Detail_team/>}/>

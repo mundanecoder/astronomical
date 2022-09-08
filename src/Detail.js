@@ -8,6 +8,7 @@ import { ReactDOM } from "react";
 import Button from "@mui/material/Button";
 import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { List } from "@mui/material";
 
 const Detail = () => {
   const [details, setDetail] = useState([]);
@@ -21,6 +22,21 @@ const Detail = () => {
   const previous = () => {
     navigate(-1);
   };
+
+  const location = useLocation()
+
+  console.log(location.state)
+
+  // const getNavigatedData =()=>{
+    
+
+  // }
+
+
+
+
+
+
   // const pageno =2
   // const playerId = id
   // console.log(pageno);
@@ -54,12 +70,32 @@ const Detail = () => {
       return 0;
     }
     params.playerId = element;
+
+    navigate(`/detail/${pageno}/${params.playerId}`)
+
     // console.log(params.playerId);
     // console.log(typeof element);
   };
 
   const navigateTo=()=>{
     navigate(`/detail/${pageno}/${playerId}`)
+  }
+
+  const navNEXT =()=>{
+    details
+    .filter((item) => {
+      if (item.id == params.playerId) {
+        return item;
+      }
+    })
+    .map((item) => {
+  
+  return item
+  
+    }).forEach(item => navigate(`/detail/${pageno}/${item.id}`) 
+    ).setDetail(item=>item.id)
+
+  
   }
 
 
@@ -85,6 +121,8 @@ const Detail = () => {
 
     params.playerId = Pid[current_id - 1];
 
+    navigate(`/detail/${pageno}/${params.playerId}`)
+
     //   const C_id = details.filter((item,index)=>{
     //         if(item.index==current_id+count){
     //             return console.log(item.id)
@@ -92,6 +130,16 @@ const Detail = () => {
     //     })
     //     console.log(C_id)
   };
+
+  const Togallery = ()=>{
+    navigate("/")
+
+  }
+
+  const ToList = ()=>{
+    navigate(`/list`)
+
+  }
 
   // window.addEventListener('keyup',(e)=> {
     // if(e.keyCode == 39){
@@ -114,11 +162,25 @@ const Detail = () => {
         <div className="btn_container">
 
 
+        <Button variant="contained" onClick={Togallery}>
+            TO-Gallery
+          </Button>
+{/* 
+          <Button variant="contained" onClick={navNEXT}>
+            next
+          </Button> */}
+          
+          
+
           <Button variant="contained" onClick={previous}>
             Move-Back
           </Button>
           <br/>
-          <Button variant="contained" onClick={navigateTo}> TO-PLAYER-PAGE</Button>
+          {/* <Button variant="contained" onClick={navigateTo}> TO-PLAYER-PAGE</Button> */}
+
+          <Button variant="contained" onClick={ToList}>
+            TO-List
+          </Button>
           {/* <span className="btn"  onClick={navigateTo}></span> */}
         </div>
 
@@ -153,10 +215,12 @@ const Detail = () => {
 
                 <div className="head" key={details.id}>
                    <h1 className="pname">
-                      {first_name.toUpperCase()} {last_name.toUpperCase()}
+                      {first_name.toUpperCase()} {last_name.toUpperCase()} 
                     </h1>
                 </div >
                 <div className="des_box" key={details.id}>
+
+                <span className="idid" > ID : {id}</span>
 {/* 
                     <h1 className="pname">
                       {first_name.toUpperCase()} {last_name.toUpperCase()}

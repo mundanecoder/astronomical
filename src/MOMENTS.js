@@ -1,22 +1,31 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation , useNavigate} from 'react-router-dom';
 
 const MOMENTS = () => {
 
+  const navigate = useNavigate();
+  const sendData = (e)=>{
+    console.log("clicked")
+    navigate("/hof",{
+      state:{
+        hi:"hello",
+        age:29
+      }
+    })
+  }
+  // const stateTopass = ()=>{
+  //   num : 20
 
-  const location = useLocation();
+  // };
 
-  console.log(location)
-  // const Params = useParams();
-  // const {name}=Params
 
-  // console.warn(name)
   return (
     <div>
-        {/* <h1>
-            lets have some best MOMENTS of <span>{location.pathname}</span>
-        </h1> */}
+         <h1>
+            lets have some best MOMENTS of 
+        </h1> 
+            <span onClick={sendData} >BUTTON</span>
     </div>
   )
 }
