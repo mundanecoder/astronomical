@@ -21,12 +21,13 @@ const MOMENTS = () => {
 
 
   return (
-    <div>
-         <h1>
-            lets have some best MOMENTS of 
-        </h1> 
-            <span onClick={sendData} >BUTTON</span>
-    </div>
+    <h1>hello</h1>
+    // <div>
+    //      <h1>
+    //         lets have some best MOMENTS of 
+    //     </h1> 
+    //         <span onClick={sendData} >BUTTON</span>
+    // </div>
   )
 }
 

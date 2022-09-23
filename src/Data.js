@@ -2,9 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Players from "./Players";
-import { Alert } from "@mui/material";
+import { Alert, Button } from "@mui/material";
 import { useNavigate, NavLink } from "react-router-dom";
-import { Location, useLocation } from "react-router-dom";
+// import { Location, useLocation } from "react-router-dom";
 import propic from "./card.jpg";
 // import List from './List'
 
@@ -16,7 +16,7 @@ const Data = () => {
   const [count, setCount] = useState([]);
   // const [stickyClass, page_changebar] = useState("");
   const [pageno, setpageno] = useState(1);
-  const [playerId,setplayerId] = useState([0]);
+  const [playerId,setplayerId] = useState([]);
 
   //// using hooks useState to store api data and update accordingly
 
@@ -29,7 +29,7 @@ const Data = () => {
   
 
     // setplayerId(item=>item = )
-    console.log("clicked")
+    // console.log("clicked")
 
     const change = ()=>{
       myData
@@ -49,13 +49,33 @@ const Data = () => {
           })
           // const sendData = (e)=>{
 
-          navigate('/detail/${pageno}/${playerId}',{
-            state:{
-              hi:"hello",
-              age:29
-            }
-          })
+         
+          
+
+           
+          
         // }
+    }
+
+    const toComponent = () =>{
+      navigate(`/detail/${pageno}/${playerId}`)
+    }
+
+    const hello = ()=>{
+      console.log("hello")
+    }
+    const hello1 = ()=>{
+      console.log("hello1")
+    }
+
+    const handleCLick=()=>{
+      // setplayerId(item =>item =players.id)
+      change()
+      // toComponent()
+      // hello()
+      // hello1()
+      
+
     }
 
 
@@ -141,6 +161,8 @@ const Data = () => {
       <span className="item" onClick={sortItem} placeholder="pos_sort">
       Ascending
         </span>
+        <br/>
+        {/* <Button onClick={ handleCLick }>check</Button> */}
       </div>
 
       <div className="find">
@@ -166,7 +188,7 @@ const Data = () => {
         </span>
       </div>
 
-      
+      {/* change */}
 
       <div className="grid">
         {myData
@@ -182,16 +204,12 @@ const Data = () => {
           })
           .map((players) => {
             const { first_name, team, position, last_name } = players;
-            // setplayerId(item=>item+1)
+          
 
             const playerId = players.id;
-            // console.log(playerId)
-
-            // <NavLink to="/detail"></NavLink>
-
-            // console.log(pageno)
+            
             return (
-              <NavLink to={`/detail/${pageno}/${playerId}`} onClick={change} >
+              <NavLink to={`/detail/${pageno}/${playerId}`} onClick={handleCLick} >
                 <div className="profile" key={myData.id}>
                   <div className="data_id">
                     <span className="name_id">{playerId}</span>
@@ -218,16 +236,3 @@ const Data = () => {
 
 export default Data;
 
-{
-  /* <p className='pos'>{JSON.stringify(team.city)}</p> */
-}
-{
-  /* <p className='pos1'>{JSON.stringify(team.name)}</p> */
-}
-{
-  /* <p className='pos'>{JSON.stringify(team.)}</p> */
-}
-
-{
-  /* <p>{team}</p> */
-}

@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from "./nba.png"
 import { NavLink } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 
 const Players = () => {
-    const location = useLocation();
+    // const location = useLocation();
 
-    console.log(location)
+    // console.log(location)
   return (
     <div>
 
